@@ -15,7 +15,7 @@ class CentroController extends Controller
      */
     public function index()
     {
-         $union = DB::select('SELECT o.id_regional, o.nombre_centro, e.nombre_regional, o.estado_centro_activo
+         $union = DB::select('SELECT o.id_regional,o.id_centro, o.nombre_centro, e.nombre_regional, o.estado_centro_activo
         FROM regional e
         INNER JOIN centro o
         ON o.id_centro = e.id_regional;');
